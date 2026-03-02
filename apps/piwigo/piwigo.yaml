@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: piwigo
-          image: lscr.io/linuxserver/piwigo:latest
+          image: lscr.io/linuxserver/piwigo:16.3.0-ls332
           ports:
             - containerPort: 80
           env:
