@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: piwigo
+  namespace: piwigo
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: gallery.esp.edu.kg
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: piwigo
+                port:
+                  number: 80
