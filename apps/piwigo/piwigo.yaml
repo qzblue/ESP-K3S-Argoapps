@@ -30,6 +30,12 @@ spec:
           image: lscr.io/linuxserver/piwigo:16.3.0-ls332
           ports:
             - containerPort: 80
+
+          # 新增：把 Secret 里的 key/value 全部注入为环境变量
+          envFrom:
+            - secretRef:
+                name: piwigo-db-secret
+
           env:
             - name: PUID
               value: "1000"
@@ -37,6 +43,7 @@ spec:
               value: "1000"
             - name: TZ
               value: "Asia/Taipei"
+
           volumeMounts:
             - name: piwigo-data
               mountPath: /config
