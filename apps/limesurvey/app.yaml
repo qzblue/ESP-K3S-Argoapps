@@ -49,6 +49,10 @@ spec:
 
         mariadb:
           enabled: true
+          image:
+            registry: docker.io
+            repository: bitnami/mariadb
+            tag: latest
           auth:
             rootPassword: "f189541c51e9b484"
             database: "LimeSurvey"
