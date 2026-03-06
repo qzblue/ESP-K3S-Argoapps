@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://martialblog.github.io/helm-charts/
     chart: limesurvey
-    targetRevision: <CHART_VERSION>
+    targetRevision: 0.9.0
     helm:
       releaseName: limesurvey
       valuesObject:
