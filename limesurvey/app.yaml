@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://martialblog.github.io/helm-charts/
     chart: limesurvey
-    targetRevision: 1.0.7
+    targetRevision: <CHART_VERSION>
     helm:
       releaseName: limesurvey
       valuesObject:
@@ -27,7 +27,7 @@ spec:
         limesurvey:
           admin:
             user: admin
-            password: "ChangeMe-Strong-Password-123!"
+            password: "Qq389510848.."
             name: "ESP Forms Admin"
             email: "it@esp.edu.kg"
 
@@ -50,10 +50,10 @@ spec:
         mariadb:
           enabled: true
           auth:
-            rootPassword: "Replace-Root-Password-456!"
-            database: limesurvey
-            username: limesurvey
-            password: "Replace-DB-Password-789!"
+            rootPassword: "f189541c51e9b484"
+            database: "LimeSurvey"
+            username: "LimeSurvey"
+            password: "yJBfxRfp576jPRpf"
           primary:
             persistence:
               enabled: true
