@@ -1,0 +1,89 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: limesurvey
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: limesurvey
+
+  source:
+    repoURL: https://martialblog.github.io/helm-charts/
+    chart: limesurvey
+    targetRevision: 1.0.7
+    helm:
+      releaseName: limesurvey
+      valuesObject:
+        replicaCount: 1
+
+        updateStrategy:
+          type: Recreate
+
+        limesurvey:
+          admin:
+            user: admin
+            password: "ChangeMe-Strong-Password-123!"
+            name: "ESP Forms Admin"
+            email: "it@esp.edu.kg"
+
+          publicUrl: "http://forms.esp.edu.kg"
+          baseUrl: "http://forms.esp.edu.kg"
+          urlFormat: "path"
+          showScriptName: "false"
+
+          tableSession: false
+          debug: 0
+          debugSql: 0
+
+        persistence:
+          enabled: true
+          storageClassName: local-path
+          accessModes:
+            - ReadWriteOnce
+          size: 5Gi
+
+        mariadb:
+          enabled: true
+          auth:
+            rootPassword: "Replace-Root-Password-456!"
+            database: limesurvey
+            username: limesurvey
+            password: "Replace-DB-Password-789!"
+          primary:
+            persistence:
+              enabled: true
+              storageClass: local-path
+              size: 10Gi
+
+        service:
+          type: ClusterIP
+          port: 80
+
+        ingress:
+          enabled: true
+          className: traefik
+          hosts:
+            - host: forms.esp.edu.kg
+              paths:
+                - path: /
+                  pathType: Prefix
+
+        resources:
+          requests:
+            cpu: 300m
+            memory: 512Mi
+          limits:
+            cpu: "1"
+            memory: 1Gi
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
