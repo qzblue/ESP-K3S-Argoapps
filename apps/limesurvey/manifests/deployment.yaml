@@ -61,7 +61,11 @@ spec:
             - sh
             - -ec
             - |
+              mkdir -p /data/themes/question
+              mkdir -p /data/themes/survey
               mkdir -p /data/themes/user/esp-brand
+              mkdir -p /data/surveys
+              mkdir -p /data/users
               cp -f /brand/custom-brand.css /data/themes/user/esp-brand/custom-brand.css
           volumeMounts:
             - name: limesurvey-data
