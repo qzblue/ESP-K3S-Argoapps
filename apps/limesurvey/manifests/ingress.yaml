@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: limesurvey
+  namespace: limesurvey
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: forms.esp.edu.kg
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: limesurvey
+                port:
+                  number: 80

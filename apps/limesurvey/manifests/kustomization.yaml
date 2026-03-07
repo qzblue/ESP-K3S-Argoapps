@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: limesurvey
+resources:
+  - namespace.yaml
+  - pvc.yaml
+  - external-db-svc.yaml
+  - secret.yaml
+  - configmap-release-lock.yaml
+  - configmap-branding.yaml
+  - service.yaml
+  - deployment.yaml
+  - ingress.yaml
+  - backup-cronjob.yaml

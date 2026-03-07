@@ -1,0 +1,64 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: limesurvey-db-backup
+  namespace: limesurvey
+spec:
+  schedule: "0 3 * * *"
+  suspend: true
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: mysqldump
+              image: mysql:8.4
+              imagePullPolicy: IfNotPresent
+              command:
+                - sh
+                - -ec
+                - |
+                  TS="$(date +%Y%m%d-%H%M%S)"
+                  mysqldump \
+                    -h"${DB_HOST}" \
+                    -P"${DB_PORT}" \
+                    -u"${DB_USER}" \
+                    -p"${DB_PASSWORD}" \
+                    "${DB_NAME}" \
+                    > "/backup/limesurvey-${TS}.sql"
+              env:
+                - name: DB_HOST
+                  valueFrom:
+                    secretKeyRef:
+                      name: limesurvey-db-secret
+                      key: DB_HOST
+                - name: DB_PORT
+                  valueFrom:
+                    secretKeyRef:
+                      name: limesurvey-db-secret
+                      key: DB_PORT
+                - name: DB_NAME
+                  valueFrom:
+                    secretKeyRef:
+                      name: limesurvey-db-secret
+                      key: DB_NAME
+                - name: DB_USER
+                  valueFrom:
+                    secretKeyRef:
+                      name: limesurvey-db-secret
+                      key: DB_USER
+                - name: DB_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: limesurvey-db-secret
+                      key: DB_PASSWORD
+              volumeMounts:
+                - name: limesurvey-data
+                  mountPath: /backup
+          volumes:
+            - name: limesurvey-data
+              persistentVolumeClaim:
+                claimName: limesurvey-data

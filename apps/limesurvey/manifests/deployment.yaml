@@ -1,0 +1,169 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: limesurvey
+  namespace: limesurvey
+  labels:
+    app: limesurvey
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: limesurvey
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: limesurvey
+    spec:
+      initContainers:
+        - name: wait-for-db
+          image: mysql:8.4
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -ec
+            - |
+              until mysqladmin ping -h"${DB_HOST}" -P"${DB_PORT}" -u"${DB_USER}" -p"${DB_PASSWORD}" --silent; do
+                echo "waiting for external database ${DB_HOST}:${DB_PORT}"
+                sleep 5
+              done
+          env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_PORT
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_PASSWORD
+        - name: prepare-brand-assets
+          image: busybox:1.36
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -ec
+            - |
+              mkdir -p /data/themes/user/esp-brand
+              cp -f /brand/custom-brand.css /data/themes/user/esp-brand/custom-brand.css
+          volumeMounts:
+            - name: limesurvey-data
+              mountPath: /data
+            - name: brand-assets
+              mountPath: /brand
+      containers:
+        - name: limesurvey
+          image: martialblog/limesurvey:6.16.10-260223-apache
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_TYPE
+              value: mysql
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_PORT
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_NAME
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_PASSWORD
+            - name: DB_CHARSET
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_CHARSET
+                  optional: true
+            - name: DB_COLLATION
+              valueFrom:
+                secretKeyRef:
+                  name: limesurvey-db-secret
+                  key: DB_COLLATION
+                  optional: true
+            - name: ADMIN_USER
+              value: admin
+            - name: ADMIN_NAME
+              value: ESP Forms Admin
+            - name: ADMIN_EMAIL
+              value: forms@esp.edu.kg
+            - name: ADMIN_PASSWORD
+              value: change-me-now
+            - name: PUBLIC_URL
+              value: http://forms.esp.edu.kg
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 20
+            timeoutSeconds: 5
+            periodSeconds: 10
+            failureThreshold: 6
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            timeoutSeconds: 5
+            periodSeconds: 20
+            failureThreshold: 6
+          startupProbe:
+            httpGet:
+              path: /
+              port: 8080
+            timeoutSeconds: 5
+            periodSeconds: 10
+            failureThreshold: 30
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 2Gi
+          volumeMounts:
+            - name: limesurvey-data
+              mountPath: /var/www/html/upload
+      volumes:
+        - name: limesurvey-data
+          persistentVolumeClaim:
+            claimName: limesurvey-data
+        - name: brand-assets
+          configMap:
+            name: limesurvey-branding
+            items:
+              - key: custom-brand.css
+                path: custom-brand.css

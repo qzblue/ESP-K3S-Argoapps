@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: limesurvey-branding
+  namespace: limesurvey
+data:
+  SITE_NAME: ESP Forms
+  BRAND_PRIMARY_COLOR: "#0F4C81"
+  BRAND_ACCENT_COLOR: "#39A0ED"
+  BRAND_FONT_FAMILY: "'Noto Sans TC', 'Noto Sans', sans-serif"
+  BRAND_WELCOME_TEXT: "Welcome to ESP online survey platform."
+  SMTP_ENABLED: "false"
+  SMTP_HOST: ""
+  SMTP_PORT: "587"
+  SMTP_USER: ""
+  SMTP_FROM: "forms@esp.edu.kg"
+  SMTP_TLS: "true"
+  custom-brand.css: |
+    :root {
+      --esp-primary: #0F4C81;
+      --esp-accent: #39A0ED;
+    }
+
+    .navbar-brand, .brand-logo {
+      font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-primary, .btn-submit {
+      background-color: var(--esp-primary);
+      border-color: var(--esp-primary);
+    }
+
+    .btn-primary:hover, .btn-submit:hover {
+      background-color: #0B3A61;
+      border-color: #0B3A61;
+    }
+
+    .welcome-container, .jumbotron {
+      background: linear-gradient(120deg, #E6F3FF 0%, #F8FBFF 100%);
+      border-radius: 12px;
+      border: 1px solid #D6E8F8;
+    }
