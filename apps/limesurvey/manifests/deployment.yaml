@@ -161,6 +161,8 @@ spec:
           volumeMounts:
             - name: limesurvey-data
               mountPath: /var/www/html/upload
+            - name: limesurvey-data
+              mountPath: /upload
       volumes:
         - name: limesurvey-data
           persistentVolumeClaim:
