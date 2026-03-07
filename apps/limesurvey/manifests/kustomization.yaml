@@ -10,5 +10,6 @@ resources:
   - configmap-branding.yaml
   - service.yaml
   - deployment.yaml
+  - upload-permission-job.yaml
   - ingress.yaml
   - backup-cronjob.yaml
