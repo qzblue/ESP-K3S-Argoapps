@@ -31,9 +31,10 @@ spec:
             name: "ESP Forms Admin"
             email: "it@esp.edu.kg"
 
-          baseUrl: "http://forms.esp.edu.kg"
-          urlFormat: "get"
-          showScriptName: "true"
+          publicUrl: ""
+          baseUrl: ""
+          urlFormat: "path"
+          showScriptName: "false"
 
           tableSession: false
           debug: 0
