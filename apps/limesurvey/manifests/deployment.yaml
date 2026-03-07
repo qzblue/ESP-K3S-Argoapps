@@ -21,6 +21,9 @@ spec:
       labels:
         app: limesurvey
     spec:
+      securityContext:
+        fsGroup: 33
+        fsGroupChangePolicy: OnRootMismatch
       initContainers:
         - name: wait-for-db
           image: mysql:8.4
@@ -67,6 +70,8 @@ spec:
               mkdir -p /data/surveys
               mkdir -p /data/users
               cp -f /brand/custom-brand.css /data/themes/user/esp-brand/custom-brand.css
+              chown -R 33:33 /data
+              chmod -R ug+rwX /data
           volumeMounts:
             - name: limesurvey-data
               mountPath: /data
