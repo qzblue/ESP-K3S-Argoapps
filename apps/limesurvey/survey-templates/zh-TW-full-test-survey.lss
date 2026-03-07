@@ -19,7 +19,7 @@
       <row>
         <qid><![CDATA[81]]></qid>
         <code><![CDATA[1012]]></code>
-        <answer><![CDATA[Answer B]]></answer>
+        <answer><![CDATA[選項 B]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[2]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -28,7 +28,7 @@
       <row>
         <qid><![CDATA[81]]></qid>
         <code><![CDATA[1011]]></code>
-        <answer><![CDATA[Answer A]]></answer>
+        <answer><![CDATA[選項 A]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[1]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -37,7 +37,7 @@
       <row>
         <qid><![CDATA[80]]></qid>
         <code><![CDATA[1014]]></code>
-        <answer><![CDATA[Answer D]]></answer>
+        <answer><![CDATA[選項 D]]></answer>
         <assessment_value><![CDATA[1]]></assessment_value>
         <sortorder><![CDATA[4]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -46,7 +46,7 @@
       <row>
         <qid><![CDATA[80]]></qid>
         <code><![CDATA[1013]]></code>
-        <answer><![CDATA[Answer C]]></answer>
+        <answer><![CDATA[選項 C]]></answer>
         <assessment_value><![CDATA[1]]></assessment_value>
         <sortorder><![CDATA[3]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -55,7 +55,7 @@
       <row>
         <qid><![CDATA[80]]></qid>
         <code><![CDATA[1011]]></code>
-        <answer><![CDATA[Answer A]]></answer>
+        <answer><![CDATA[選項 A]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[1]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -64,7 +64,7 @@
       <row>
         <qid><![CDATA[80]]></qid>
         <code><![CDATA[1012]]></code>
-        <answer><![CDATA[Answer B]]></answer>
+        <answer><![CDATA[選項 B]]></answer>
         <assessment_value><![CDATA[1]]></assessment_value>
         <sortorder><![CDATA[2]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -73,7 +73,7 @@
       <row>
         <qid><![CDATA[81]]></qid>
         <code><![CDATA[1013]]></code>
-        <answer><![CDATA[Answer C]]></answer>
+        <answer><![CDATA[選項 C]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[3]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -82,7 +82,7 @@
       <row>
         <qid><![CDATA[81]]></qid>
         <code><![CDATA[1014]]></code>
-        <answer><![CDATA[Answer D]]></answer>
+        <answer><![CDATA[選項 D]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[4]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -91,7 +91,7 @@
       <row>
         <qid><![CDATA[118]]></qid>
         <code><![CDATA[1011]]></code>
-        <answer><![CDATA[Answer A]]></answer>
+        <answer><![CDATA[選項 A]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[1]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -100,7 +100,7 @@
       <row>
         <qid><![CDATA[118]]></qid>
         <code><![CDATA[1012]]></code>
-        <answer><![CDATA[Answer B]]></answer>
+        <answer><![CDATA[選項 B]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[2]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -109,7 +109,7 @@
       <row>
         <qid><![CDATA[118]]></qid>
         <code><![CDATA[1013]]></code>
-        <answer><![CDATA[Answer C]]></answer>
+        <answer><![CDATA[選項 C]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[3]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -118,7 +118,7 @@
       <row>
         <qid><![CDATA[118]]></qid>
         <code><![CDATA[1014]]></code>
-        <answer><![CDATA[Answer D]]></answer>
+        <answer><![CDATA[選項 D]]></answer>
         <assessment_value><![CDATA[0]]></assessment_value>
         <sortorder><![CDATA[4]]></sortorder>
         <language>zh-Hant-TW</language>
@@ -189,7 +189,7 @@
         <sid><![CDATA[33263]]></sid>
         <group_name><![CDATA[Example 4b]]></group_name>
         <group_order><![CDATA[4]]></group_order>
-        <description><![CDATA[This example demonstrates the use of the timer attributes. The box below has its time limit set to 60 (seconds), and the time limit action is set to move on without warning. There are also 2 warnings set: the first one is set to display a message (<a href="http://docs.limesurvey.org/tiki-index.php?page=Question+attributes&amp;structure=English+Instructions+for+LimeSurvey#time_limit_warning_message">time limit warning message</a>) for 3 seconds (<a href="http://docs.limesurvey.org/tiki-index.php?page=Question+attributes&amp;structure=English+Instructions+for+LimeSurvey#time_limit_warning_display_time">time limit warning display time</a>) when there are 30 seconds left (<a href="http://docs.limesurvey.org/tiki-index.php?page=Question+attributes&amp;structure=English+Instructions+for+LimeSurvey#time_limit_warning">time limit warning</a>), and the second one is set to display a message for 3 seconds when there are 10 seconds left.]]></description>
+        <description><![CDATA[此區塊示範計時器屬性：下方題目限制 60 秒，時間到後不警告直接跳下一步，並在剩 30 秒與 10 秒時各顯示 3 秒提示訊息。]]></description>
         <language>zh-Hant-TW</language>
       </row>
     </rows>
@@ -220,7 +220,7 @@
         <gid><![CDATA[18]]></gid>
         <type><![CDATA[L]]></type>
         <title><![CDATA[101]]></title>
-        <question><![CDATA[This is a list (radio) question.]]></question>
+        <question><![CDATA[這是一題清單（單選）題。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -237,7 +237,7 @@
         <gid><![CDATA[18]]></gid>
         <type><![CDATA[L]]></type>
         <title><![CDATA[102]]></title>
-        <question><![CDATA[This is the same list (radio) question, but with &quot;random answer order&quot; on.]]></question>
+        <question><![CDATA[這是同一題清單（單選）題，啟用了「選項隨機排序」。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -254,7 +254,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[K]]></type>
         <title><![CDATA[201]]></title>
-        <question><![CDATA[This is a multiple numerical input question.]]></question>
+        <question><![CDATA[這是一題多欄位數值輸入題。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -271,7 +271,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[K]]></type>
         <title><![CDATA[202]]></title>
-        <question><![CDATA[This is the same multiple numerical input question, but with slider layout on.]]></question>
+        <question><![CDATA[這是同一題多欄位數值輸入題，啟用了滑桿版面。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[&nbsp;The slider minimum is 0, the maximum is 100, the slider accuracy is 1, and the slider starts at the middle position.]]></help>
         <other><![CDATA[N]]></other>
@@ -288,7 +288,7 @@
         <gid><![CDATA[20]]></gid>
         <type><![CDATA[S]]></type>
         <title><![CDATA[301]]></title>
-        <question><![CDATA[This is a short free text question.]]></question>
+        <question><![CDATA[這是一題短文字輸入題。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -305,7 +305,7 @@
         <gid><![CDATA[20]]></gid>
         <type><![CDATA[S]]></type>
         <title><![CDATA[302]]></title>
-        <question><![CDATA[This is the same short free text question, but the width is set to 100, and the maximum characters is set to 20.]]></question>
+        <question><![CDATA[這是同一題短文字輸入題，輸入框寬度為 100，且最多 20 字元。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -322,7 +322,7 @@
         <gid><![CDATA[21]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[401]]></title>
-        <question><![CDATA[This is a huge text question with a time limit of 30 seconds, and the time limit action set to &quot;Disable Only&quot;]]></question>
+        <question><![CDATA[這是一題長文字輸入題，限制 30 秒，時間到後動作設定為「僅停用」。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -339,7 +339,7 @@
         <gid><![CDATA[20]]></gid>
         <type><![CDATA[S]]></type>
         <title><![CDATA[303]]></title>
-        <question><![CDATA[This is the same short free text question with a prefix and suffix set.]]></question>
+        <question><![CDATA[這是同一題短文字輸入題，已設定前綴與後綴。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -356,7 +356,7 @@
         <gid><![CDATA[22]]></gid>
         <type><![CDATA[D]]></type>
         <title><![CDATA[501]]></title>
-        <question><![CDATA[This is a date question.]]></question>
+        <question><![CDATA[這是一題日期題。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -373,7 +373,7 @@
         <gid><![CDATA[22]]></gid>
         <type><![CDATA[D]]></type>
         <title><![CDATA[502]]></title>
-        <question><![CDATA[This is the same date question, but with a minimum and maximum year (2005 and 2015) set.]]></question>
+        <question><![CDATA[這是同一題日期題，設定了最小與最大年份（2005 到 2015）。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -390,7 +390,7 @@
         <gid><![CDATA[22]]></gid>
         <type><![CDATA[D]]></type>
         <title><![CDATA[503]]></title>
-        <question><![CDATA[This is the same date question, but with &quot;Display Select Boxes&quot; turned on.]]></question>
+        <question><![CDATA[這是同一題日期題，啟用了「顯示下拉選單」。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -407,7 +407,7 @@
         <gid><![CDATA[23]]></gid>
         <type><![CDATA[M]]></type>
         <title><![CDATA[601]]></title>
-        <question><![CDATA[This is a multiple options question with the last answer option set as an exclusive option.]]></question>
+        <question><![CDATA[這是一題多選題，最後一個選項設為互斥選項。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -424,7 +424,7 @@
         <gid><![CDATA[23]]></gid>
         <type><![CDATA[M]]></type>
         <title><![CDATA[602]]></title>
-        <question><![CDATA[This is the same multiple options question, but with minimum and maximum answers (1 and 3) set.]]></question>
+        <question><![CDATA[這是同一題多選題，設定最少與最多作答數（1 到 3）。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -441,9 +441,9 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[K]]></type>
         <title><![CDATA[203]]></title>
-        <question><![CDATA[This is the same multiple numerical input question, but with minimum and maximum sums (50 and 75) specified.]]></question>
+        <question><![CDATA[這是同一題多欄位數值輸入題，設定總和最小值與最大值（50 到 75）。]]></question>
         <preg><![CDATA[]]></preg>
-        <help><![CDATA[In order to answer this question, the user must enter numbers such that the sum of all four entries is between 50 and 75. The total is displayed at the bottom for convenience.]]></help>
+        <help><![CDATA[作答時，四個欄位的總和需介於 50 到 75。底部會顯示目前總和以便檢查。]]></help>
         <other><![CDATA[N]]></other>
         <mandatory><![CDATA[N]]></mandatory>
         <question_order><![CDATA[14]]></question_order>
@@ -458,7 +458,7 @@
         <gid><![CDATA[18]]></gid>
         <type><![CDATA[L]]></type>
         <title><![CDATA[103]]></title>
-        <question><![CDATA[This is the same list (radio) question, but with &quot;hide tip&quot; on.]]></question>
+        <question><![CDATA[這是同一題清單（單選）題，啟用了「隱藏提示」。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -475,7 +475,7 @@
         <gid><![CDATA[26]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[402]]></title>
-        <question><![CDATA[This is another huge text box with a 1-minute timer, a time limit action to move on without warning, and 2 warnings: one at 30 seconds left, and one at 10 seconds left.]]></question>
+        <question><![CDATA[這是另一題長文字題，限制 1 分鐘；時間到會直接進入下一頁且不警告，並在剩 30 秒與 10 秒時各提示一次。]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -547,7 +547,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2011]]></title>
-        <question><![CDATA[First Subquestion]]></question>
+        <question><![CDATA[子題一]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -564,7 +564,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2012]]></title>
-        <question><![CDATA[Second Subquestion]]></question>
+        <question><![CDATA[子題二]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -581,7 +581,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2013]]></title>
-        <question><![CDATA[Third Subquestion]]></question>
+        <question><![CDATA[子題三]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -598,7 +598,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2014]]></title>
-        <question><![CDATA[Fourth Subquestion]]></question>
+        <question><![CDATA[子題四]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -615,7 +615,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2011]]></title>
-        <question><![CDATA[First Subquestion]]></question>
+        <question><![CDATA[子題一]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -632,7 +632,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2012]]></title>
-        <question><![CDATA[Second Subquestion]]></question>
+        <question><![CDATA[子題二]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -649,7 +649,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2013]]></title>
-        <question><![CDATA[Third Subquestion]]></question>
+        <question><![CDATA[子題三]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -666,7 +666,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2014]]></title>
-        <question><![CDATA[Fourth Subquestion]]></question>
+        <question><![CDATA[子題四]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -853,7 +853,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2011]]></title>
-        <question><![CDATA[First Subquestion]]></question>
+        <question><![CDATA[子題一]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -870,7 +870,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2012]]></title>
-        <question><![CDATA[Second Subquestion]]></question>
+        <question><![CDATA[子題二]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -887,7 +887,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2013]]></title>
-        <question><![CDATA[Third Subquestion]]></question>
+        <question><![CDATA[子題三]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -904,7 +904,7 @@
         <gid><![CDATA[19]]></gid>
         <type><![CDATA[T]]></type>
         <title><![CDATA[2014]]></title>
-        <question><![CDATA[Fourth Subquestion]]></question>
+        <question><![CDATA[子題四]]></question>
         <preg><![CDATA[]]></preg>
         <help><![CDATA[]]></help>
         <other><![CDATA[N]]></other>
@@ -2460,16 +2460,17 @@
         <surveyls_endtext>感謝填答，測試完成。</surveyls_endtext>
         <surveyls_url><![CDATA[]]></surveyls_url>
         <surveyls_urldescription><![CDATA[]]></surveyls_urldescription>
-        <surveyls_email_invite_subj><![CDATA[Invitation to participate in survey]]></surveyls_email_invite_subj>
-        <surveyls_email_invite><![CDATA[Dear {FIRSTNAME},<br /><br />You have been invited to participate in a survey.<br /><br />The survey is titled:<br />"{SURVEYNAME}"<br /><br />"{SURVEYDESCRIPTION}"<br /><br />To participate, please click on the link below.<br /><br />Sincerely,<br /><br />{ADMINNAME} ({ADMINEMAIL})<br /><br />----------------------------------------------<br />Click here to do the survey:<br />{SURVEYURL}<br /><br />If you do not want to participate in this survey and don't want to receive any more invitations please click the following link:<br />{OPTOUTURL}]]></surveyls_email_invite>
-        <surveyls_email_remind_subj><![CDATA[Reminder to participate in survey]]></surveyls_email_remind_subj>
-        <surveyls_email_remind><![CDATA[Dear {FIRSTNAME},<br /><br />Recently we invited you to participate in a survey.<br /><br />We note that you have not yet completed the survey, and wish to remind you that the survey is still available should you wish to take part.<br /><br />The survey is titled:<br />"{SURVEYNAME}"<br /><br />"{SURVEYDESCRIPTION}"<br /><br />To participate, please click on the link below.<br /><br />Sincerely,<br /><br />{ADMINNAME} ({ADMINEMAIL})<br /><br />----------------------------------------------<br />Click here to do the survey:<br />{SURVEYURL}<br /><br />If you do not want to participate in this survey and don't want to receive any more invitations please click the following link:<br />{OPTOUTURL}]]></surveyls_email_remind>
-        <surveyls_email_register_subj><![CDATA[Survey registration confirmation]]></surveyls_email_register_subj>
-        <surveyls_email_register><![CDATA[Dear {FIRSTNAME},<br /><br />You, or someone using your email address, have registered to participate in an online survey titled {SURVEYNAME}.<br /><br />To complete this survey, click on the following URL:<br /><br />{SURVEYURL}<br /><br />If you have any questions about this survey, or if you did not register to participate and believe this email is in error, please contact {ADMINNAME} at {ADMINEMAIL}.]]></surveyls_email_register>
-        <surveyls_email_confirm_subj><![CDATA[Confirmation of completed survey]]></surveyls_email_confirm_subj>
-        <surveyls_email_confirm><![CDATA[Dear {FIRSTNAME},<br /><br />This email is to confirm that you have completed the survey titled {SURVEYNAME} and your response has been saved. Thank you for participating.<br /><br />If you have any further questions about this email, please contact {ADMINNAME} at {ADMINEMAIL}.<br /><br />Sincerely,<br /><br />{ADMINNAME}]]></surveyls_email_confirm>
+        <surveyls_email_invite_subj><![CDATA[邀請您參與問卷]]></surveyls_email_invite_subj>
+        <surveyls_email_invite><![CDATA[親愛的 {FIRSTNAME}：<br /><br />誠摯邀請您參與以下問卷：<br />「{SURVEYNAME}」<br /><br />{SURVEYDESCRIPTION}<br /><br />請點擊下方連結開始填答：<br />{SURVEYURL}<br /><br />如不希望再收到邀請，請點擊：<br />{OPTOUTURL}<br /><br />{ADMINNAME} ({ADMINEMAIL})]]></surveyls_email_invite>
+        <surveyls_email_remind_subj><![CDATA[提醒您完成問卷]]></surveyls_email_remind_subj>
+        <surveyls_email_remind><![CDATA[親愛的 {FIRSTNAME}：<br /><br />提醒您，以下問卷尚未完成：<br />「{SURVEYNAME}」<br /><br />{SURVEYDESCRIPTION}<br /><br />請點擊連結繼續填答：<br />{SURVEYURL}<br /><br />如不希望再收到提醒，請點擊：<br />{OPTOUTURL}<br /><br />{ADMINNAME} ({ADMINEMAIL})]]></surveyls_email_remind>
+        <surveyls_email_register_subj><![CDATA[問卷註冊確認]]></surveyls_email_register_subj>
+        <surveyls_email_register><![CDATA[親愛的 {FIRSTNAME}：<br /><br />您已註冊參與問卷：{SURVEYNAME}<br /><br />請點擊以下連結開始填答：<br />{SURVEYURL}<br /><br />若您並未提出註冊，請聯絡 {ADMINNAME}（{ADMINEMAIL}）。]]></surveyls_email_register>
+        <surveyls_email_confirm_subj><![CDATA[問卷完成確認]]></surveyls_email_confirm_subj>
+        <surveyls_email_confirm><![CDATA[親愛的 {FIRSTNAME}：<br /><br />您已完成問卷「{SURVEYNAME}」，作答結果已儲存。感謝您的參與。<br /><br />如有疑問請聯絡 {ADMINNAME}（{ADMINEMAIL}）。]]></surveyls_email_confirm>
         <surveyls_dateformat><![CDATA[1]]></surveyls_dateformat>
       </row>
     </rows>
   </surveys_languagesettings>
 </document>
+
