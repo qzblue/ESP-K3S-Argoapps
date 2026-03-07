@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wikijs
+  namespace: wikijs
+  labels:
+    app: wikijs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wikijs
+  template:
+    metadata:
+      labels:
+        app: wikijs
+    spec:
+      containers:
+        - name: wikijs
+          image: requarks/wiki:2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+          env:
+            - name: DB_TYPE
+              value: "mysql"
+            - name: DB_HOST
+              value: "10.32.65.22"
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: wikijs-db
+                  key: DB_USER
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: wikijs-db
+                  key: DB_PASS
+            - name: DB_NAME
+              value: "wikijs"
+            - name: DB_SSL
+              value: "false"
+            - name: WIKI_HOST
+              value: "wiki.esp.edu.kg"
+            - name: WIKI_ADMIN_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: wikijs-db
+                  key: WIKI_ADMIN_EMAIL
+            - name: WIKI_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: wikijs-db
+                  key: WIKI_ADMIN_PASSWORD
+          volumeMounts:
+            - name: wikijs-data
+              mountPath: /var/wiki
+      volumes:
+        - name: wikijs-data
+          persistentVolumeClaim:
+            claimName: wikijs-pvc
