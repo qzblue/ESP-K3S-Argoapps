@@ -77,6 +77,17 @@ spec:
                 - path: /
                   pathType: Prefix
 
+        extraVolumes:
+          - name: apache-conf
+            configMap:
+              name: limesurvey-apache-conf
+
+        extraVolumeMounts:
+          - name: apache-conf
+            mountPath: /etc/apache2/sites-available/000-default.conf
+            subPath: 000-default.conf
+            readOnly: true
+
         resources:
           requests:
             cpu: 300m
