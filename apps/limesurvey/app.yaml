@@ -84,8 +84,7 @@ spec:
 
         extraVolumeMounts:
           - name: apache-conf
-            mountPath: /etc/apache2/sites-available/000-default.conf
-            subPath: 000-default.conf
+            mountPath: /etc/apache2/sites-available
             readOnly: true
 
         resources:
