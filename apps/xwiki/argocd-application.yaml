@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: xwiki-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/qzblue/ESP-K3S-Argoapps.git"
+    targetRevision: main
+    path: apps/xwiki
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: xwiki
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+

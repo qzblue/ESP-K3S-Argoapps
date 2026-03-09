@@ -45,16 +45,18 @@ spec:
               value: "false"
             - name: WIKI_HOST
               value: "wiki.esp.edu.kg"
-            - name: WIKI_ADMIN_EMAIL
-              valueFrom:
-                secretKeyRef:
-                  name: wikijs-db
-                  key: WIKI_ADMIN_EMAIL
-            - name: WIKI_ADMIN_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: wikijs-db
-                  key: WIKI_ADMIN_PASSWORD
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 60
+            periodSeconds: 20
           volumeMounts:
             - name: wikijs-data
               mountPath: /var/wiki
