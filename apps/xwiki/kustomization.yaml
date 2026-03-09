@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: xwiki
 resources:
   - namespace.yaml
+  - storageclass.yaml
   - secret.yaml
   - pvc.yaml
   - deployment.yaml
   - service.yaml
   - ingress.yaml
-
