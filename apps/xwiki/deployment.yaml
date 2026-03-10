@@ -39,14 +39,14 @@ spec:
                   key: DB_PASSWORD
           readinessProbe:
             httpGet:
-              path: /xwiki/
+              path: /
               port: 8080
             initialDelaySeconds: 45
             periodSeconds: 10
             timeoutSeconds: 5
           livenessProbe:
             httpGet:
-              path: /xwiki/
+              path: /
               port: 8080
             initialDelaySeconds: 120
             periodSeconds: 20
@@ -58,4 +58,3 @@ spec:
         - name: xwiki-data
           persistentVolumeClaim:
             claimName: xwiki-data
-
